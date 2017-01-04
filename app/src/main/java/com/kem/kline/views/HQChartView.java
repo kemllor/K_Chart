@@ -389,7 +389,7 @@ public class HQChartView extends LinearLayout {
      */
     private void initPriceElements() {
         //价格线
-        priceLineElement = new BrokenLine();
+        priceLineElement = new BrokenLine(mContext);
         priceLineElement.setFill(true);
         priceLineElement.setLineColor(Color.parseColor("#387ea6"));
         priceLineElement.setDefaultShowPointNums(chartType.getPointNum());
@@ -397,14 +397,14 @@ public class HQChartView extends LinearLayout {
         priceLineElement.setCalculateDataExtremum(false);
 
         //均线
-        averageLineElement = new BrokenLine();
+        averageLineElement = new BrokenLine(mContext);
         averageLineElement.setFill(false);
         averageLineElement.setLineColor(Color.parseColor("#d79e15"));
         averageLineElement.setDefaultShowPointNums(chartType.getPointNum());
         averageLineElement.setCalculateDataExtremum(false);
 
         //成交量
-        turnoverLineElement = new Histogram();
+        turnoverLineElement = new Histogram(mContext);
         turnoverLineElement.setFill(true);
         turnoverLineElement.setColor(Color.parseColor("#fc4638"), Color.parseColor("#fc4638"),
                 Color.parseColor("#38a647"));
@@ -434,31 +434,31 @@ public class HQChartView extends LinearLayout {
         kLineElement.setContext(mContext);
 
         //MA5
-        MA5 = new BrokenLine();
+        MA5 = new BrokenLine(mContext);
         MA5.setFill(false);
         MA5.setLineColor(Color.parseColor("#FFC730"));
         MA5.setCalculateDataExtremum(false);
 
         //MA10
-        MA10 = new BrokenLine();
+        MA10 = new BrokenLine(mContext);
         MA10.setFill(false);
         MA10.setLineColor(Color.parseColor("#DF79F7"));
         MA10.setCalculateDataExtremum(false);
 
         //MA20
-        MA20 = new BrokenLine();
+        MA20 = new BrokenLine(mContext);
         MA20.setFill(false);
         MA20.setLineColor(Color.parseColor("#00CCFA"));
         MA20.setCalculateDataExtremum(false);
 
         //MA60
-        MA60 = new BrokenLine();
+        MA60 = new BrokenLine(mContext);
         MA60.setFill(false);
         MA60.setLineColor(Color.parseColor("#8D8D8D"));
         MA60.setCalculateDataExtremum(false);
 
         //成交量
-        turnoverLineElement = new Histogram();
+        turnoverLineElement = new Histogram(mContext);
         turnoverLineElement.setFill(true);
         //// TODO: 2016/11/06 kem
         //        成交量颜色配置
@@ -474,17 +474,17 @@ public class HQChartView extends LinearLayout {
      */
     private void initKDJElements() {
         //k线
-        k = new BrokenLine();
+        k = new BrokenLine(mContext);
         k.setFill(false);
         k.setLineColor(Color.parseColor("#95E2F7"));
         k.setCalculateDataExtremum(false);
         //d线
-        d = new BrokenLine();
+        d = new BrokenLine(mContext);
         d.setFill(false);
         d.setLineColor(Color.parseColor("#F888A6"));
         d.setCalculateDataExtremum(false);
         //j线
-        j = new BrokenLine();
+        j = new BrokenLine(mContext);
         j.setFill(false);
         j.setLineColor(Color.parseColor("#FFB415"));
         j.setCalculateDataExtremum(false);
@@ -495,19 +495,19 @@ public class HQChartView extends LinearLayout {
      */
     private void initMACDElements() {
         //dif线
-        dif = new BrokenLine();
+        dif = new BrokenLine(mContext);
         dif.setFill(false);
         dif.setLineColor(Color.parseColor("#95E2F7"));
         dif.setCalculateDataExtremum(false);
 
         //ema线
-        ema = new BrokenLine();
+        ema = new BrokenLine(mContext);
         ema.setFill(false);
         ema.setLineColor(Color.parseColor("#F888A6"));
         ema.setCalculateDataExtremum(false);
 
         //成交量
-        macdHistogram = new Histogram();
+        macdHistogram = new Histogram(mContext);
         macdHistogram.setFill(true);
         // // TODO: 2016/11/06 kem
        /* macdHistogram.setColor(Color.parseColor(QuotationConfigUtils.sPriceUpColor), Color.parseColor("#fc4638"),
@@ -522,25 +522,25 @@ public class HQChartView extends LinearLayout {
      */
     private void initDMIElements() {
         //pdi线
-        pdi = new BrokenLine();
+        pdi = new BrokenLine(mContext);
         pdi.setFill(false);
         pdi.setLineColor(Color.parseColor("#95E2F7"));
         pdi.setCalculateDataExtremum(false);
 
         //mdi线
-        mdi = new BrokenLine();
+        mdi = new BrokenLine(mContext);
         mdi.setFill(false);
         mdi.setLineColor(Color.parseColor("#F888A6"));
         mdi.setCalculateDataExtremum(false);
 
         //adx线
-        adx = new BrokenLine();
+        adx = new BrokenLine(mContext);
         adx.setFill(false);
         adx.setLineColor(Color.parseColor("#FFB415"));
         adx.setCalculateDataExtremum(false);
 
         //adxr线
-        adxr = new BrokenLine();
+        adxr = new BrokenLine(mContext);
         adxr.setFill(false);
         adxr.setLineColor(Color.parseColor("#4CB649"));
         adxr.setCalculateDataExtremum(false);
@@ -551,7 +551,7 @@ public class HQChartView extends LinearLayout {
      */
     private void initWRElements() {
         //wr线
-        wr = new BrokenLine();
+        wr = new BrokenLine(mContext);
         wr.setFill(false);
         wr.setLineColor(Color.parseColor("#009be7"));
         wr.setCalculateDataExtremum(false);
@@ -562,7 +562,7 @@ public class HQChartView extends LinearLayout {
      */
     private void initOBVElements() {
         //obv线
-        obv = new BrokenLine();
+        obv = new BrokenLine(mContext);
         obv.setFill(false);
         obv.setLineColor(Color.parseColor("#009be7"));
         obv.setCalculateDataExtremum(false);
@@ -574,19 +574,19 @@ public class HQChartView extends LinearLayout {
     private void initRSIElements() {
 
         //rsi6线
-        rsi6 = new BrokenLine();
+        rsi6 = new BrokenLine(mContext);
         rsi6.setFill(false);
         rsi6.setLineColor(Color.parseColor("#95E2F7"));
         rsi6.setCalculateDataExtremum(false);
 
         //rsi12线
-        rsi12 = new BrokenLine();
+        rsi12 = new BrokenLine(mContext);
         rsi12.setFill(false);
         rsi12.setLineColor(Color.parseColor("#F888A6"));
         rsi12.setCalculateDataExtremum(false);
 
         //rsi24线
-        rsi24 = new BrokenLine();
+        rsi24 = new BrokenLine(mContext);
         rsi24.setFill(false);
         rsi24.setLineColor(Color.parseColor("#FFB415"));
         rsi24.setCalculateDataExtremum(false);
@@ -597,22 +597,22 @@ public class HQChartView extends LinearLayout {
      */
     private void initBOLLElements() {
         //上轨
-        up = new BrokenLine();
+        up = new BrokenLine(mContext);
         up.setFill(false);
         up.setLineColor(Color.parseColor("#F4BE04"));
         up.setCalculateDataExtremum(false);
         //中轨
-        middle = new BrokenLine();
+        middle = new BrokenLine(mContext);
         middle.setFill(false);
         middle.setLineColor(Color.parseColor("#000000"));
         middle.setCalculateDataExtremum(false);
         //下轨
-        down = new BrokenLine();
+        down = new BrokenLine(mContext);
         down.setFill(false);
         down.setLineColor(Color.parseColor("#9932CD"));
         down.setCalculateDataExtremum(false);
         //boll柱子
-        boll = new Boll();
+        boll = new Boll(mContext);
         boll.setFill(true);
         macdHistogram.setCalculateDataExtremum(false);
 

@@ -47,6 +47,7 @@ public class Coordinates extends ViewContainer {
      * @param bottomScaleTextArray 底部刻度文字数组
      */
     public Coordinates(Context context, String[] leftScaleTextArray, String[] rightScaleTextArray, String[] bottomScaleTextArray) {
+        super(context);
         this.context = context;
         this.leftScaleTextArray = leftScaleTextArray;
         this.rightScaleTextArray = rightScaleTextArray;
@@ -59,6 +60,7 @@ public class Coordinates extends ViewContainer {
      * 坐标系
      */
     public Coordinates(Context context) {
+        super(context);
         this.context = context;
         //初始化画笔
         initPaint();
@@ -95,7 +97,7 @@ public class Coordinates extends ViewContainer {
         bottomTextPaint.setColor(Color.GRAY);
 
         //初始化空隙,该空隙用于文字与边距和纬线之间的距离
-        space = UnitUtils.spToPx(context,8);
+        space = UnitUtils.spToPx(context,3);
     }
 
     @Override

@@ -1,5 +1,6 @@
 package com.kem.kline.viewbeans;
 
+import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
@@ -59,14 +60,16 @@ public class Histogram extends ViewContainer {
      * @param YMax 坐标系中最大值
      * @param YMin 坐标系中最小值
      */
-    public Histogram(float YMax, float YMin) {
+    public Histogram(float YMax, float YMin, Context context) {
+        super(context);
         this.YMax = YMax;
         this.YMin = YMin;
         //初始化线画笔
         initPaint();
     }
 
-    public Histogram() {
+    public Histogram(Context context) {
+        super(context);
         //初始化线画笔
         initPaint();
     }

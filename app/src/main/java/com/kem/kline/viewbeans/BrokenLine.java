@@ -1,5 +1,6 @@
 package com.kem.kline.viewbeans;
 
+import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.CornerPathEffect;
@@ -59,14 +60,16 @@ public class BrokenLine extends ViewContainer {
      * @param YMax 坐标系中最大值
      * @param YMin 坐标系中最小值
      */
-    public BrokenLine(float YMax, float YMin) {
+    public BrokenLine(Context context,float YMax, float YMin) {
+        super(context);
         this.YMax = YMax;
         this.YMin = YMin;
         //初始化线画笔
         initPaint();
     }
 
-    public BrokenLine() {
+    public BrokenLine(Context context) {
+        super(context);
         //初始化线画笔
         initPaint();
     }
