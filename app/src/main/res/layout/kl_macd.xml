@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="horizontal"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:gravity="center_vertical">
+
+
+    <TextView android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:textSize="12sp"
+              android:text="MACD(12,26,9)="
+              android:textColor="#009be7"/>
+
+    <TextView
+            android:id="@+id/macd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#009be7"
+            android:textSize="12sp"
+            android:text="--"/>
+    <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="5dp">
+
+        <TextView android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="DIF: "
+                  android:textSize="12sp"
+                  android:textColor="#95E2F7"/>
+        <TextView
+                android:id="@+id/dif"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:text="--"
+                android:textColor="#95E2F7"/>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:text="DEA: "
+                android:layout_marginLeft="5dp"
+                android:textColor="#F888A6"/>
+        <TextView
+                android:id="@+id/dea"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:text="--"
+                android:textColor="#F888A6"/>
+
+    </LinearLayout>
+</LinearLayout>

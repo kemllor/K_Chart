@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="horizontal"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:gravity="center_vertical">
+
+
+    <TextView android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:textSize="12sp"
+              android:text="DMI(14,6)"
+              android:textColor="#009be7"/>
+
+    <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="5dp">
+
+        <TextView android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="PDI: "
+                  android:textSize="12sp"
+                  android:textColor="#95E2F7"/>
+        <TextView
+                android:id="@+id/pdi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:text="--"
+                android:textColor="#95E2F7"/>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:text="MDI: "
+                android:layout_marginLeft="5dp"
+                android:textColor="#F888A6"/>
+        <TextView
+                android:id="@+id/mdi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:text="--"
+                android:textColor="#F888A6"/>
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:text="ADX: "
+                android:layout_marginLeft="5dp"
+                android:textColor="#FFB415"/>
+        <TextView
+                android:id="@+id/adx"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:text="--"
+                android:textColor="#FFB415"/>
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:text="ADXR: "
+                android:layout_marginLeft="5dp"
+                android:textColor="#4CB649"/>
+        <TextView
+                android:id="@+id/adxr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:text="--"
+                android:textColor="#4CB649"/>
+
+    </LinearLayout>
+</LinearLayout>

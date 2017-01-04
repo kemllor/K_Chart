@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="horizontal"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:gravity="center_vertical">
+
+
+    <TextView android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:textSize="12sp"
+              android:text="RSI(6,12,24)"
+              android:textColor="#009be7"/>
+
+    <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="5dp">
+
+        <TextView android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="RSI6: "
+                  android:textSize="12sp"
+                  android:textColor="#95E2F7"/>
+        <TextView
+                android:id="@+id/rsi6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:text="--"
+                android:textColor="#95E2F7"/>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:text="RSI12: "
+                android:layout_marginLeft="5dp"
+                android:textColor="#F888A6"/>
+        <TextView
+                android:id="@+id/rsi12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:text="--"
+                android:textColor="#F888A6"/>
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:text="RSI24: "
+                android:layout_marginLeft="5dp"
+                android:textColor="#FFB415"/>
+        <TextView
+                android:id="@+id/rsi24"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:text="--"
+                android:textColor="#FFB415"/>
+
+    </LinearLayout>
+</LinearLayout>
