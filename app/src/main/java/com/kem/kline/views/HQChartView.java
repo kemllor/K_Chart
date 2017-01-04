@@ -421,7 +421,7 @@ public class HQChartView extends LinearLayout {
         mLoadingPop = new PopupWindow(loadTv, ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
 
         //K线
-        kLineElement = new CandleLine();
+        kLineElement = new CandleLine(mContext);
         kLineElement.setFill(true);
         //// TODO: 2016/11/06 kem
         //k线颜色配置；

@@ -4,6 +4,8 @@ import android.content.Context;
 import android.graphics.Canvas;
 import android.view.MotionEvent;
 
+import com.kem.kline.utils.UnitUtils;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -41,13 +43,15 @@ public class ViewContainer {
     //缩放增量
     protected int incremental = 6;
 
-    public ViewContainer() {
+    public ViewContainer(Context context) {
+        mContext = context;
         childrenList = new ArrayList<ViewContainer>() {
             @Override
             public boolean add(ViewContainer object) {
                 this.remove(object);
                 return super.add(object);
             }
+
             @Override
             public void add(int index, ViewContainer object) {
                 this.remove(object);
@@ -83,7 +87,7 @@ public class ViewContainer {
 
     public void setCoordinateWidth(float coordinateWidth) {
         this.maxCoordinateWidth = coordinateWidth;
-        this.coordinateWidth=maxCoordinateWidth-100;
+        this.coordinateWidth = maxCoordinateWidth - UnitUtils.dpToPx(mContext, 50);
         for (ViewContainer viewContainer : getChildrenList()) {
             viewContainer.setCoordinateWidth(this.coordinateWidth);
         }

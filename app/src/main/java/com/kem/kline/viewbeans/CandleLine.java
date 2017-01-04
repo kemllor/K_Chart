@@ -1,5 +1,6 @@
 package com.kem.kline.viewbeans;
 
+import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
@@ -59,13 +60,15 @@ public class CandleLine extends ViewContainer {
         public void pageLoadChart();
     }
 
-    public CandleLine(float YMin, float YMax) {
+    public CandleLine(float YMin, float YMax,Context context) {
+        super(context);
         this.YMin = YMin;
         this.YMax = YMax;
         initPaint();
     }
 
-    public CandleLine() {
+    public CandleLine(Context context) {
+        super(context);
         initPaint();
     }
 

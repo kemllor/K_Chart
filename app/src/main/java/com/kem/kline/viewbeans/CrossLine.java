@@ -1,12 +1,15 @@
 package com.kem.kline.viewbeans;
 
 import android.annotation.TargetApi;
+import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.PointF;
 import android.os.Build;
 import android.view.MotionEvent;
+
+import com.kem.kline.utils.UnitUtils;
 
 import java.math.RoundingMode;
 import java.text.DecimalFormat;
@@ -33,6 +36,8 @@ public class CrossLine extends ViewContainer {
     private int maxShowNums = 0;
     //线颜色
     private int lineColor = Color.RED;
+    //上下文；
+    private Context context;
     //点颜色
     private int pointColor = Color.parseColor("#999999");
     //矩形填充颜色
@@ -62,7 +67,8 @@ public class CrossLine extends ViewContainer {
         public void crossLineHideCallBack();
     }
 
-    public CrossLine(float YMin, float YMax, int maxShowNums) {
+    public CrossLine(float YMin, float YMax, int maxShowNums,Context context) {
+        super(context);
         this.YMin = YMin;
         this.YMax = YMax;
         this.maxShowNums = maxShowNums;
@@ -70,7 +76,9 @@ public class CrossLine extends ViewContainer {
         initPaint();
     }
 
-    public CrossLine() {
+    public CrossLine(Context context) {
+        super(context);
+        this.context = context;
         this.isShow = true;
         initPaint();
     }
@@ -444,10 +452,10 @@ public class CrossLine extends ViewContainer {
 
 
                 //// TODO: 2016/12/28 修改矩形框显示位置；
-                canvas.drawRect(maxCoordinateWidth - 100 , y - 15, maxCoordinateWidth , y + 15,
+                canvas.drawRect(maxCoordinateWidth - UnitUtils.dpToPx(context, 50), y - 15, maxCoordinateWidth, y + 15,
                         rectPaint);
 
-                canvas.drawText(values, coordinateWidth+5 , y + 8, textPaint);
+                canvas.drawText(values, coordinateWidth + 5, y + 8, textPaint);
                 
                /* canvas.drawRect(coordinateWidth - textsize - 10, y - 15, coordinateWidth, y + 15,
                         rectPaint);

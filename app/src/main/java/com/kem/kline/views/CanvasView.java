@@ -85,9 +85,9 @@ public class CanvasView extends View implements ChartView {
      */
     final private void initObject() {
         this.setBackgroundColor(0xffffffff);
-        viewContainer = new ViewContainer();//所有控件承载体
+        viewContainer = new ViewContainer(context);//所有控件承载体
         coordinates = new Coordinates(context);//坐标系
-        crossLine = new CrossLine();//十字线
+        crossLine = new CrossLine(context);//十字线
         viewContainer.addChildren(coordinates);//把坐标系添加到控件承载体
 
     }
